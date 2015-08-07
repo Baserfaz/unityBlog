@@ -48,8 +48,7 @@ table {
 }
 
 /*my stuffs */
-
-a, p, h1, h2, h3, h4, h5, h6 {
+a, p, h1, h2, h3, h4, h5, h6, li, pre{
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
 }
@@ -57,6 +56,10 @@ a, p, h1, h2, h3, h4, h5, h6 {
 * {
 	line-height: 1.5;
 	box-sizing: border-box;
+}
+
+img:hover {
+	opacity: 0.95;
 }
 
 .background {
@@ -69,7 +72,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
 .banner {
 	padding: 1em;
 	text-align: center;
-	border-bottom: 5px solid #333;
+	border-bottom: 15px solid #333;
 }
 
 .banner h1 {
@@ -78,7 +81,7 @@ a, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .main_content {
-	background-color: #FCF7F8;
+	background-color: #F0EDEE;
 	padding: 1.5em !important;
 }
 
@@ -105,21 +108,44 @@ a, p, h1, h2, h3, h4, h5, h6 {
 	width: 100%;
 }
 
-.post_image img:hover {
-	opacity: 0.95;
-}
-
 .post_date {
 	margin: 1em 0;
+}
+
+.post_date ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.post_date li {
+	display: inline;
+	color: #333;
+	font-size: 1.25em;
+	line-height: 1.5;
+	border-left: 3px solid rgba(46, 134, 171, 0.5);
+	padding: 0 1em;
+}
+
+.post_date li:first-child {
+	border: none;
+	padding: 0;
+	padding-right: 1em;
 }
 
 .post_date p {
 	color: #333;
 	font-size: 1.25em;
+	line-height: 1.5;
 }
 
 .post_text {
 	margin-bottom: 1em;
+}
+
+.post_text img {
+	width: 100%;
+	margin: 1em 0;
 }
 
 .post_text p {
@@ -127,19 +153,52 @@ a, p, h1, h2, h3, h4, h5, h6 {
 	line-height: 1.5;
 	font-size: 1.25em;
 	text-align: justify;
+	width: 100%;
+}
+
+.post_text h3 {
+	line-height: 1.5;
+	font-size: 2.5em;
+	color: #333;
+}
+
+.post_text h3:hover {
+	text-decoration: underline;
 }
 
 .sidebar {
 	margin-bottom: 1em;
-	border-top: 10px solid #0075A2;
-	background-color: #F5F1ED;
-	padding: 1em;
 }
 
 .sidebar p {
+	/* border-top: 10px solid #0075A2; */
+	border-top: 10px solid #5C5C59; 
+	/* background-color: #F5F1ED; */
+	background-color: #DDE9F6;
+	padding: 1em;
 	font-size: 1em;
 	line-height: 1.5;
 	text-align: justify;
+}
+
+.misc {
+
+}
+
+.misc a {
+	padding: 0.5em; 
+	margin: 1em 0;
+	display: inline;
+	background-color: #0075A2;
+	line-height: 1.5;
+	font-size: 1.2em;
+	text-decoration: none;
+	color: #F0EDEE;
+}
+
+.misc a:hover {
+	box-shadow: 3px 3px 0 #ccc;
+	opacity: 0.95;
 }
 
 .footer {
