@@ -1,0 +1,195 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*my stuffs */
+
+a, p, h1, h2, h3, h4, h5, h6 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+}
+
+* {
+	line-height: 1.5;
+	box-sizing: border-box;
+}
+
+.background {
+	background-color: #BF9B6A;
+}
+.container {
+	margin: 1em 0;
+}
+
+.banner {
+	padding: 1em;
+	text-align: center;
+	border-bottom: 5px solid #333;
+}
+
+.banner h1 {
+	font-size: 5em;
+	color: #333;
+}
+
+.main_content {
+	background-color: #FCF7F8;
+	padding: 1.5em !important;
+}
+
+.post_header {
+	margin: 1em 0;
+}
+.post_header h2 {
+	text-align: left;
+	font-size: 3em;
+	color: #333;
+}
+
+.post_header h2:hover {
+	text-decoration: underline;
+}
+
+.post_image {
+	margin-bottom: 1em;
+}
+
+.post_image img {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.post_image img:hover {
+	opacity: 0.95;
+}
+
+.post_date {
+	margin: 1em 0;
+}
+
+.post_date p {
+	color: #333;
+	font-size: 1.25em;
+}
+
+.post_text {
+	margin-bottom: 1em;
+}
+
+.post_text p {
+	color: #333;
+	line-height: 1.5;
+	font-size: 1.25em;
+	text-align: justify;
+}
+
+.sidebar {
+	margin-bottom: 1em;
+	border-top: 10px solid #0075A2;
+	background-color: #F5F1ED;
+	padding: 1em;
+}
+
+.sidebar p {
+	font-size: 1em;
+	line-height: 1.5;
+	text-align: justify;
+}
+
+.footer {
+	padding: 1.25em;
+	text-align: center;
+	background-color: #333;
+}
+.footer p {
+	color: #eee;
+}
+
+/* COOL STUFF RIGHTY HERE! */
+.blueStyle {
+	text-decoration: underline;
+	color: #0075A2;
+}
+
+.fa {
+	color: #0075A2;
+}
+
+/*HR STYLEZ */
+.style_1 {
+	background-color: #0075A2;
+	opacity: 0.2;
+	border: none;
+	height: 5px;
+}
+.style_2 {
+	background-color: #333;
+	border: none;
+	height: 5px; 
+	opacity: 0.1;
+	margin: 1em 0;
+}
+
+/* OTHER COOL STUFFZ */
+::selection {
+	background: #252323;
+	color: #F5F1ED;
+}
+::-moz-selection {
+	background: #A99985;
+	color: #F5F1ED;
+}
+
+
+
+
+
+
+
+
