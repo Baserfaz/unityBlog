@@ -48,7 +48,7 @@ table {
 }
 
 /*my stuffs */
-a, p, h1, h2, h3, h4, h5, h6, li, pre{
+a, p, h1, h2, h3, h4, h5, h6, li, pre, code{
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
 }
@@ -60,6 +60,17 @@ a, p, h1, h2, h3, h4, h5, h6, li, pre{
 
 img:hover {
 	opacity: 0.95;
+}
+
+pre {
+	line-height: 1.5;
+	font-size: 1em;
+	margin: 1em 0;
+	padding: 1em;
+	overflow: auto;
+	width: auto;
+	color: #eee;
+	background-color: #333;
 }
 
 .background {
@@ -92,10 +103,11 @@ img:hover {
 	text-align: left;
 	font-size: 3em;
 	color: #333;
+	display: inline;
 }
 
 .post_header h2:hover {
-	text-decoration: underline;
+	/* text-shadow: 0 2px #ccc; */
 }
 
 .post_image {
@@ -106,6 +118,7 @@ img:hover {
 	display: block;
 	margin: 0 auto;
 	width: 100%;
+	height: 400px;
 }
 
 .post_date {
@@ -149,6 +162,8 @@ img:hover {
 }
 
 .post_text p {
+	padding-left: 1em;
+	border-left: 5px solid #DDE9F6;
 	color: #333;
 	line-height: 1.5;
 	font-size: 1.25em;
@@ -158,12 +173,9 @@ img:hover {
 
 .post_text h3 {
 	line-height: 1.5;
-	font-size: 2.5em;
+	margin: 0.5em 0;
+	font-size: 1.75em;
 	color: #333;
-}
-
-.post_text h3:hover {
-	text-decoration: underline;
 }
 
 .sidebar {
@@ -171,9 +183,7 @@ img:hover {
 }
 
 .sidebar p {
-	/* border-top: 10px solid #0075A2; */
 	border-top: 10px solid #5C5C59; 
-	/* background-color: #F5F1ED; */
 	background-color: #DDE9F6;
 	padding: 1em;
 	font-size: 1em;
@@ -181,17 +191,23 @@ img:hover {
 	text-align: justify;
 }
 
-.misc {
+.sidebar a {
+	color: #333;
+	text-decoration: none;
+}
 
+.sidebar a:hover {
+	opacity: 0.5;
+	text-decoration: underline;
 }
 
 .misc a {
 	padding: 0.5em; 
-	margin: 1em 0;
 	display: inline;
 	background-color: #0075A2;
+	text-align: center;
 	line-height: 1.5;
-	font-size: 1.2em;
+	font-size: 1em;
 	text-decoration: none;
 	color: #F0EDEE;
 }
@@ -202,12 +218,19 @@ img:hover {
 }
 
 .footer {
+	line-height: 1.5;
 	padding: 1.25em;
 	text-align: center;
 	background-color: #333;
 }
-.footer p {
+
+.footer p, a {
 	color: #eee;
+	text-decoration: none;
+}
+
+.footer a:hover {
+	text-decoration: underline;
 }
 
 /* COOL STUFF RIGHTY HERE! */

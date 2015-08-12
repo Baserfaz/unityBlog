@@ -3,15 +3,7 @@
 	<head>
 		<meta charset='utf-8'>
 		<meta http-equiv="X-UA-Compatible" content="chrome=1">
-		<meta
-		name="viewport"
-		content="
-		  width=device-width,
-		  initial-scale=1,
-		  minimum-scale=1,
-		  maximum-scale=1
-		"
-		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
 		<link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="css/stylesheet.css" media="screen">
 		<link rel="stylesheet" type="text/css" href="css/unsemantic.css" media="screen">
@@ -34,85 +26,102 @@
 				<!-- single post -->
 				<!-- post header -->
 				<div class="grid-100 post_header">
-					<h2>Floating Text &amp; Numbers</h2>
+					<h2>Quick tips: Floating Text &amp; Numbers</h2>
 				</div>
 				<!-- post date -->
 				<div class="grid-100 post_date">
 					<ul>
-						<li><i class="fa fa-user"></i> Baserfaz</li>
-						<li><i class="fa fa-calendar"></i> 6.8.2015</li>
+						<li><i class="fa fa-user"></i> Heikki Heiskanen</li>
+						<li><i class="fa fa-calendar"></i> 12.8.2015</li>
+						<li><i class="fa fa-tags"></i> dynamic, gui</li>
 					</ul>
 				</div>
 				<!-- post image -->
 				<div class="grid-100 post_image">
-					<img src="http://lorempixel.com/800/300">
+					<img src="images\floattext\img1.png">
 				</div>
 				
 				<!-- post text -->
 				<div class="grid-70 post_text">
-					<h3>Awesome title! Rock'n</h3>
-					<p>Lorem ipsum dolor sit amet, aenean sed ligula rhoncus vestibulum, eros ultrices vitae sodales sem, mattis urna. 
-					Sit et semper nibh posuere urna a, cursus vel scelerisque vivamus integer, porttitor dis inceptos velit ut phasellus a, elit ante feugiat.
-					Consectetuer pharetra tellus ac venenatis eleifend velit, est urna quis vel, nisl integer, proin elit tellus diam praesent dolor, id donec facilisis. 
-					Sed fringilla vitae magna. Dui dignissim hac dui eget, lobortis litora adipiscing in in et consequat, 
-					ipsum nunc est mattis odio pellentesque, tincidunt mattis at placerat a dolor elit. Varius sapien vitae auctor adipiscing lorem, id arcu ultrices sem fusce vel sed,
-					hymenaeos sagittis lorem, nunc venenatis nam condimentum dignissim dui, proin adipiscing velit tellus pulvinar quam vehicula. 
-					</p> <br>
-					<h3>The what and the how!</h3>
-					<p>Nascetur suspendisse imperdiet in elit malesuada et, cras viverra ultrices risus. Nulla dolor odio, ut enim lacus blandit a. 
-					Nulla cras nam litora donec vitae natoque. Sollicitudin condimentum rutrum curabitur. Metus in. Nunc quisque leo justo sagittis, 
-					laoreet cras duis occaecati vivamus wisi, aenean nulla suscipit. Consectetuer cras mauris porttitor ut, nullam mi egestas nunc auctor, 
-					molestie sed vitae mauris eros fringilla pede, molestiae in donec lacus at dapibus. Sequi sed suspendisse pharetra dolor odio, 
-					est ut pellentesque eu porttitor id consequat. Eu quam dui sit ante sem commodo. Malesuada iaculis vel sed integer sollicitudin,
-					at libero ut tincidunt vel, lorem purus vulputate nulla. Massa urna nullam ligula et, mauris cum amet condimentum, 
-					molestie aliquet gravida et commodo rhoncus id, pulvinar nec amet nunc. Mattis varius egestas integer fuga morbi ante, 
-					adipiscing quam pellentesque dapibus, duis vitae, quis congue amet ac vel at iaculis. Dui cras non. Volutpat feugiat vestibulum, 
-					facilisis in. Aenean tristique, lorem in enim, turpis magna.</p> <br>
-				
-					<img src="http://lorempixel.com/800/400">
-					<h3>They see me rollin', they hatin'.</h3>
-					<p>Gravida dictum nam. Tempus dapibus luctus sed, tincidunt pulvinar. Est tempus quam et molestie, consequat turpis, enim nulla felis. 
-					Enim dignissim amet arcu bibendum et, sit morbi, id ut vivamus id in, nulla integer lorem vestibulum libero nibh, ultrices montes vitae. 
-					Felis nullam dapibus, varius sed. Ullamcorper dolor, ac auctor lobortis risus suspendisse, felis mauris pulvinar arcu a nam bibendum, 
-					scelerisque iaculis urna lectus, rutrum luctus aenean mauris sapien. Rutrum nonummy ultricies, sem et vivamus massa.
-					Viverra sit nibh harum phasellus commodo, amet sociosqu metus leo urna, est porttitor rhoncus sed minim asperiores
-					nec blandit hac massa egestas viverra amet, dignissim rutrum id. Iaculis justo nulla nam volutpat ullamcorper nulla, 
-					n quis pellentesque fringilla, mi elit sed, dapibus odio curabitur vestibulum nec egestas, praesent mi.</p> <br>
-					<p>Justo laoreet ut cras ipsum non auctor, hymenaeos libero neque rhoncus integer, sed neque nam integer at posuere. 
-					Aliquet vestibulum etiam at donec fames vitae, a maecenas massa. Odio enim orci eleifend pretium nibh id. Commodo quisque libero. 
-					Nunc integer ac, suspendisse metus non, eget maecenas arcu vehicula, risus cras mattis aliquam nascetur vulputate, duis feugiat velit accumsan ullamco eu.
-					Urna vehicula vitae semper mollis curabitur risus, nulla mauris vitae ipsum maecenas hendrerit sit, vestibulum sed, urna interdum in elit. Aliquet nulla, 
-					integer lacinia, tincidunt enim aliquam accumsan et, viverra arcu curabitur maecenas justo eget. Suspendisse dui lorem placerat lorem nullam faucibus, 
-					suspendisse quam molestie vitae laoreet, cum nibh ut lectus, hac euismod massa, tristique nostra venenatis venenatis.</p>
+					<h3>1. Create canvas</h3>
+					<p>Start simple by adding a canvas to your scene (UI -> Canvas). My canvas is named simply as 'gui'. You don't have to do anything else to it for now.</p>
+					
+					<h3>2. Create a new text gameobject</h3>
+					<p>This again is pretty self-explanatory. Just go ahead and create a new text object (UI -> Text). This will be our text, which we are going to animate.</p>
+					
+					<h3>3. Create a parent gameobject for your text gameobject</h3>
+					<img src="images\floattext\parent_close.png">
+					<p>Just create an empty gameobject and drag your text gameobject under it, to make it a child gameobject of the new empty gameobject (in my case I already named it to 'floating_text_parent'). 
+					Later, we will then instantiate this parent/child combo. By doing this we ensure that the text will animate in the right position.<br> 
+					<i class="fa fa-exclamation-circle"></i> Remember to create a prefab of this 'floating_text_parent'!</p>
+					
+					<h3>4. Create a new animation for your text gameobject</h3>
+					<img src="images\floattext\anim_close.png">
+					<p>Open Unity's animation tab by navigating to window -> animation. Next select our text gameobject, which we want to animate, and click the 'create' button. 
+					After saving the animation, copy these properties (as shown in the image on top) to the dopesheet.</p> 
+					<p><i class="fa fa-exclamation-circle"></i> Change the sample count to 16.</p>
+					<img src="images\floattext\anim_close_01.png">
+					<p>After copying the properties go ahead and click on the rightmost rectangle in the timeline and make sure the record button is pressed down.</p>
+					<img src="images\floattext\anim_insp.png">
+					<p>Then look to your inspector and the rect transform's positional data fields should be highlighted in red. Now go ahead and change the 'Pos Y' value to 100 (for example). 
+					This means that on the last frame of the animation, the text gameobject has moved up by 100 pixels.</p>
+					<p><i class="fa fa-exclamation-circle"></i> Make sure that on the first frame the text is positioned to zero (pos y and pos x).</p>
+					<img src="images\floattext\anim_close_02.png">
+					<p>Next select the Text.color property and choose the rightmost rectangle on the timeline. Make sure the record button is pressed down once again.</p>
+					<img src="images\floattext\color.png">
+					<p>Then look to your inspector and the floating text's (Text (Script)) color should be highlighted in red. Press the color field and make the color transparent by sliding the 'A' slider to zero.</p>
+					<img src="images\floattext\pos.png">
+					<p>To test the animation out, make sure the 'floating_text_parent' is centered (position: 0, 0, 0) and it's a child of our canvas (named 'gui'). Then go ahead and press the 'play' button on our animation tab.</p>
+					
+					<h3>5. Using a script to instantiate our text</h3>
+					<img src="images\floattext\gm.png">
+					<p>First create a new gameobject named 'gamemaster' and add a new script to it named 'gamemaster' (or whatever you want). Then copy this simple code: </p>
+					<img src="images\floattext\script.png">
+					<p>In text format:</p>
+					<pre>
+using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;
+
+public class gamemaster : MonoBehaviour {
+
+	public GameObject floatingTextGoParent;
+	public GameObject canvasGo;	
+
+	void Update () {
+	
+		if (Input.GetMouseButtonDown (0)) {
+			GameObject floatingTextInst = (GameObject)Instantiate(floatingTextGoParent, Input.mousePosition, Quaternion.identity);
+			floatingTextInst.transform.SetParent (canvasGo.transform);
+			floatingTextInst.GetComponentInChildren<Text>().text = "Awesome!";
+			Destroy(floatingTextInst, 0.9f);
+		}
+	}
+}				</pre>
+					
+				<p>This piece of code instantiates the text's parent gameobject in the current mouse position when left mouse button is pressed. It also set's the parent to be our canvas gameobject, changes the text's value and destroys the instantiated gameobject in 0.9 seconds.</p>
+				<p><i class="fa fa-exclamation-circle"></i> If the gameobject is not destroyed then it will continue to loop it's animation.</p>
 				</div>
-				<!-- sidebar -->
+				<!-- post sidebar -->
 				<div class="grid-30 sidebar">
-					<p>Lorem ipsum dolor sit amet, aenean sed ligula rhoncus vestibulum, eros ultrices vitae sodales sem, mattis urna. 
-					Sit et semper nibh posuere urna a, cursus vel scelerisque vivamus integer, porttitor dis inceptos velit ut phasellus a, elit ante feugiat.
-					Consectetuer pharetra tellus ac venenatis eleifend velit, est urna quis vel, nisl integer, proin elit tellus diam praesent dolor, id donec facilisis. 
-					Sed fringilla vitae magna.</p> <br>
-					<p>Dui dignissim hac dui eget, lobortis litora adipiscing in in et consequat, 
-					ipsum nunc est mattis odio pellentesque, tincidunt mattis at placerat a dolor elit. Varius sapien vitae auctor adipiscing lorem, id arcu ultrices sem fusce vel sed,
-					hymenaeos sagittis lorem, nunc venenatis nam condimentum dignissim dui, proin adipiscing velit tellus pulvinar quam vehicula. </p>
-				</div>
-				<!-- downloads -->
-				<div class="grid-30 sidebar">
-					<p>Lorem ipsum dolor sit amet, aenean sed ligula rhoncus vestibulum, eros ultrices vitae sodales sem, mattis urna. 
-					Sit et semper nibh posuere urna a, cursus vel scelerisque vivamus integer, porttitor dis inceptos velit ut phasellus a, elit ante feugiat.
-					Consectetuer pharetra tellus ac venenatis eleifend velit, est urna quis vel, nisl integer, proin elit tellus diam praesent dolor, id donec facilisis. 
-					Sed fringilla vitae magna. Dui dignissim hac dui eget, lobortis litora adipiscing in in et consequat, 
-					ipsum nunc est mattis odio pellentesque, tincidunt mattis at placerat a dolor elit. Varius sapien vitae auctor adipiscing lorem, id arcu ultrices sem fusce vel sed,
-					hymenaeos sagittis lorem, nunc venenatis nam condimentum dignissim dui, proin adipiscing velit tellus pulvinar quam vehicula. </p>
+					<p>Download this project:<br>
+					<a href="https://www.dropbox.com/sh/03kpyl21zcv321m/AACWUZBW_rw6FAMewNNeBQk1a?dl=1"><i class="fa fa-cloud-download fa-2x"></i> Here!</a><br>
+					<i class="fa fa-info fa-2x"></i> File size: 4MB</p>
+					
 				</div>
 				<!-- misc -->
-				<div class="grid-100 misc">
-					<a href="#top">Go to top</a>
+				<div class="grid-70 misc">
+					<a href="#top">Back to top</a>
 				</div>
 			</div>
 			
 			<!-- footer -->
 			<div class="grid-100 footer">
 				<p>Copyright &copy; Heikki Heiskanen 2015</p>
+				<p>Contact me:</p>
+				<a href="https://twitter.com/Baserfaz" target="_blank"><i class="fa fa-twitter"></i> My Twitter</a><br>
+				<a href="http://t.co/0btbKLhgQF" target="_blank"><i class="fa fa-home"></i> Homepage (in finnish)</a>
+				
 			</div>
 		
 		</div>
