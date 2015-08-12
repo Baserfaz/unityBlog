@@ -38,7 +38,7 @@
 				</div>
 				<!-- post image -->
 				<div class="grid-100 post_image">
-					<img src="images\floattext\img1.png">
+					<img src="images/floattext/img1.png">
 				</div>
 				
 				<!-- post text -->
@@ -50,33 +50,33 @@
 					<p>This again is pretty self-explanatory. Just go ahead and create a new text object (UI -> Text). This will be our text, which we are going to animate.</p>
 					
 					<h3>3. Create a parent gameobject for your text gameobject</h3>
-					<img src="images\floattext\parent_close.png">
+					<img src="images/floattext/parent_close.png">
 					<p>Just create an empty gameobject and drag your text gameobject under it, to make it a child gameobject of the new empty gameobject (in my case I already named it to 'floating_text_parent'). 
 					Later, we will then instantiate this parent/child combo. By doing this we ensure that the text will animate in the right position.<br> 
 					<i class="fa fa-exclamation-circle"></i> Remember to create a prefab of this 'floating_text_parent'!</p>
 					
 					<h3>4. Create a new animation for your text gameobject</h3>
-					<img src="images\floattext\anim_close.png">
+					<img src="images/floattext/anim_close.png">
 					<p>Open Unity's animation tab by navigating to window -> animation. Next select our text gameobject, which we want to animate, and click the 'create' button. 
 					After saving the animation, copy these properties (as shown in the image on top) to the dopesheet.</p> 
 					<p><i class="fa fa-exclamation-circle"></i> Change the sample count to 16.</p>
-					<img src="images\floattext\anim_close_01.png">
+					<img src="images/floattext/anim_close_01.png">
 					<p>After copying the properties go ahead and click on the rightmost rectangle in the timeline and make sure the record button is pressed down.</p>
-					<img src="images\floattext\anim_insp.png">
+					<img src="images/floattext/anim_insp.png">
 					<p>Then look to your inspector and the rect transform's positional data fields should be highlighted in red. Now go ahead and change the 'Pos Y' value to 100 (for example). 
 					This means that on the last frame of the animation, the text gameobject has moved up by 100 pixels.</p>
 					<p><i class="fa fa-exclamation-circle"></i> Make sure that on the first frame the text is positioned to zero (pos y and pos x).</p>
-					<img src="images\floattext\anim_close_02.png">
+					<img src="images/floattext/anim_close_02.png">
 					<p>Next select the Text.color property and choose the rightmost rectangle on the timeline. Make sure the record button is pressed down once again.</p>
-					<img src="images\floattext\color.png">
+					<img src="images/floattext/color.png">
 					<p>Then look to your inspector and the floating text's (Text (Script)) color should be highlighted in red. Press the color field and make the color transparent by sliding the 'A' slider to zero.</p>
-					<img src="images\floattext\pos.png">
+					<img src="images/floattext/pos.png">
 					<p>To test the animation out, make sure the 'floating_text_parent' is centered (position: 0, 0, 0) and it's a child of our canvas (named 'gui'). Then go ahead and press the 'play' button on our animation tab.</p>
 					
 					<h3>5. Using a script to instantiate our text</h3>
-					<img src="images\floattext\gm.png">
+					<img src="images/floattext/gm.png">
 					<p>First create a new gameobject named 'gamemaster' and add a new script to it named 'gamemaster' (or whatever you want). Then copy this simple code: </p>
-					<img src="images\floattext\script.png">
+					<img src="images/floattext/script.png">
 					<p>In text format:</p>
 					<pre>
 using UnityEngine;
