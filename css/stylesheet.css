@@ -58,6 +58,17 @@ a, p, h1, h2, h3, h4, h5, h6, li, pre, code{
 	box-sizing: border-box;
 }
 
+img {
+	background: #fff;
+	/* border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px; */
+	padding: 8px;
+	box-shadow: 2px 2px 2px #d1d1d1;
+	-webkit-box-shadow: 2px 2px 2px #d1d1d1;
+	-moz-box-shadow: 2px 2px 2px #d1d1d1;
+}
+
 img:hover {
 	opacity: 0.95;
 }
@@ -126,6 +137,14 @@ pre {
 	margin: 1em 0;
 }
 
+.post_date a {
+	color: #333;
+}
+
+.post_date a:hover {
+	text-decoration: underline;
+}
+
 .post_date ul {
     list-style-type: none;
     margin: 0;
@@ -137,7 +156,7 @@ pre {
 	color: #333;
 	font-size: 1.25em;
 	line-height: 1.5;
-	border-left: 3px solid rgba(46, 134, 171, 0.5);
+	border-left: 1px solid #333;
 	padding: 0 1em;
 }
 
@@ -184,12 +203,20 @@ pre {
 }
 
 .sidebar p {
-	border-top: 10px solid #5C5C59; 
+	border-top: 15px solid #333; 
 	background-color: #DDE9F6;
-	padding: 1em;
 	font-size: 1em;
 	line-height: 1.5;
 	text-align: justify;
+	padding: 8px;
+	
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	box-shadow: 2px 2px 2px #d1d1d1;
+	-webkit-box-shadow: 2px 2px 2px #d1d1d1;
+	-moz-box-shadow: 2px 2px 2px #d1d1d1;
+	
 }
 
 .sidebar a {
@@ -265,7 +292,7 @@ pre {
 	color: #F5F1ED;
 }
 ::-moz-selection {
-	background: #A99985;
+	background: #252323;
 	color: #F5F1ED;
 }
 
