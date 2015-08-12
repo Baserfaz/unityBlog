@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
 		<link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="css/stylesheet.css" media="screen">
 		<link rel="stylesheet" type="text/css" href="css/unsemantic.css" media="screen">
 		<link rel="stylesheet" href="fa/css/font-awesome.min.css">
@@ -31,9 +32,9 @@
 				<!-- post date -->
 				<div class="grid-100 post_date">
 					<ul>
-						<li><i class="fa fa-user"></i> <a href="https://twitter.com/Baserfaz" target="_blank">Heikki Heiskanen</a></li>
-						<li><i class="fa fa-calendar"></i> 12.8.2015</li>
-						<li><i class="fa fa-tags"></i> dynamic, gui</li>
+						<li><i class="fa fa-user fa-fw"></i> <a href="https://twitter.com/Baserfaz" target="_blank">Heikki Heiskanen</a></li>
+						<li><i class="fa fa-calendar fa-fw"></i> 12.8.2015</li>
+						<li><i class="fa fa-tags fa-fw"></i> dynamic / gui</li>
 					</ul>
 				</div>
 				<!-- post image -->
@@ -53,19 +54,19 @@
 					<img src="images/floattext/parent_close.PNG">
 					<p>Just create an empty gameobject and drag your text gameobject under it, to make it a child gameobject of the new empty gameobject (in my case I already named it to 'floating_text_parent'). 
 					Later, we will then instantiate this parent/child combo. By doing this we ensure that the text will animate in the right position.<br> 
-					<i class="fa fa-exclamation-circle"></i> Remember to create a prefab of this 'floating_text_parent'!</p>
+					<i class="fa fa-exclamation-circle fa-fw"></i> Remember to create a prefab of this 'floating_text_parent'!</p>
 					
 					<h3>4. Create a new animation for your text gameobject</h3>
 					<img src="images/floattext/anim_close.png">
 					<p>Open Unity's animation tab by navigating to window -> animation. Next select our text gameobject, which we want to animate, and click the 'create' button. 
 					After saving the animation, copy these properties (as shown in the image on top) to the dopesheet.</p> 
-					<p><i class="fa fa-exclamation-circle"></i> Change the sample count to 16.</p>
+					<p><i class="fa fa-exclamation-circle fa-fw"></i> Change the sample count to 16.</p>
 					<img src="images/floattext/anim_close_01.PNG">
 					<p>After copying the properties go ahead and click on the rightmost rectangle in the timeline and make sure the record button is pressed down.</p>
 					<img src="images/floattext/anim_insp.PNG">
 					<p>Then look to your inspector and the rect transform's positional data fields should be highlighted in red. Now go ahead and change the 'Pos Y' value to 100 (for example). 
 					This means that on the last frame of the animation, the text gameobject has moved up by 100 pixels.</p>
-					<p><i class="fa fa-exclamation-circle"></i> Make sure that on the first frame the text is positioned to zero (pos y and pos x).</p>
+					<p><i class="fa fa-exclamation-circle fa-fw"></i> Make sure that on the first frame the text is positioned to zero (pos y and pos x).</p>
 					<img src="images/floattext/anim_close_02.PNG">
 					<p>Next select the Text.color property and choose the rightmost rectangle on the timeline. Make sure the record button is pressed down once again.</p>
 					<img src="images/floattext/color.PNG">
@@ -101,7 +102,7 @@ public class gamemaster : MonoBehaviour {
 					
 				<p>This piece of code instantiates the text's parent gameobject in the current mouse position when left mouse button is pressed. 
 				It also set's the parent to be our canvas gameobject, changes the text's value and destroys the instantiated gameobject in 0.9 seconds.</p>
-				<p><i class="fa fa-exclamation-circle"></i> If the gameobject is not destroyed then it will continue to loop its animation.</p>
+				<p><i class="fa fa-exclamation-circle fa-fw"></i> If the gameobject is not destroyed then it will continue to loop its animation.</p>
 				
 				<h3>6. Completed!</h3>
 				<img src="images/floattext/awesome.gif">
@@ -109,8 +110,8 @@ public class gamemaster : MonoBehaviour {
 				<!-- post sidebar -->
 				<div class="grid-30 sidebar">
 					<p>Download this project:<br>
-					<a href="https://www.dropbox.com/sh/03kpyl21zcv321m/AACWUZBW_rw6FAMewNNeBQk1a?dl=1"><i class="fa fa-cloud-download fa-2x"></i> Here!</a><br>
-					<i class="fa fa-info"></i> File size: 4MB</p>
+					<a href="https://www.dropbox.com/sh/03kpyl21zcv321m/AACWUZBW_rw6FAMewNNeBQk1a?dl=1"><i class="fa fa-cloud-download fa-fw"></i> Here!</a><br>
+					<i class="fa fa-info fa-fw"></i> File size: 4MB</p>
 					
 				</div>
 				<!-- misc -->
