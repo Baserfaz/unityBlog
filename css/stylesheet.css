@@ -74,7 +74,8 @@ pre {
 }
 
 .background {
-	background-color: #BF9B6A;
+	/* background-color: #BF9B6A; */
+	background-image: url('../images/school.png');
 }
 .container {
 	margin: 1em 0;
