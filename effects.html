@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/stylesheet.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="css/unsemantic.css" media="screen">
+		<link rel="stylesheet" href="fa/css/font-awesome.min.css">
+		<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<title>Unity Blog and Tips</title>
+	</head>
+	
+	<body class="background">
+		<div class="grid-container container">
+			<!-- Banner -->
+			<div class="grid-100 banner">
+				<h1><a href="index.html">Unity <span class="blueStyle">5</span> Tips <br>Blog</a></h1>
+			</div>
+			<!-- post container -->
+			<div class="grid-100 grid-parent main_content">
+				<!-- single post -->
+				<!-- post header -->
+				<div class="grid-100 post_header">
+					<h2>Quick tips: How to import and use camera effects! (free)</h2>
+				</div>
+				<!-- post date -->
+				<div class="grid-100 post_date">
+					<ul>
+						<li><i class="fa fa-user fa-fw"></i> <a href="https://twitter.com/Baserfaz" target="_blank">Heikki Heiskanen</a></li>
+						<li><i class="fa fa-calendar fa-fw"></i> 23.8.2015</li>
+						<li><i class="fa fa-tags fa-fw"></i> effects / camera</li>
+					</ul>
+				</div>
+				<!-- post image -->
+				<div class="grid-100 post_image">
+					<img src="images/effects/01.PNG"> 
+				</div>
+				
+				<!-- post text -->
+				<div class="grid-70 post_text">
+					<h3>1. Import the effect assets (free)</h3>
+					<img src="images/effects/02.PNG"> 
+					<h3>2. Select what you want to import</h3>
+					<img src="images/effects/03.PNG"> 
+					<p><i class="fa fa-exclamation-circle fa-fw"></i> Remember always to import the Editor > ImageEffects folder. You'll need that if you want to manipulate effects by using code.</p>
+					<h3>3. After importing, find the effect scripts folder</h3>
+					<img src="images/effects/05.PNG"> 
+					<h3>4. Drag &amp; drop effect scripts to your main camera </h3>
+					<img src="images/effects/awesome.gif"> 
+					<h3>5. Fiddle with the settings!</h3>
+					<img src="images/effects/06.PNG"> 
+					<h3>6. Extra: using code with effects!</h3>
+					<img src="images/effects/07.PNG">
+					<p>Using effects via code is simple: <br>
+					<i class="fa fa-exclamation-circle fa-fw"></i> Remember to import the Editor > ImageEffects folder.</p>
+					<pre>
+using UnityStandardAssets.ImageEffects;
+void Update() {
+	Camera.main.GetComponent&lt;Twirl&gt; ().center = Camera.main.ScreenToViewportPoint (new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0f));
+}</pre>
+				
+				<h3>7. Result:</h3>
+				<img src="images/effects/awesome2.gif">
+				</div>
+				
+				
+				<!-- post sidebar -->
+				<!-- <div class="grid-30 sidebar">
+					<p>Download this project:<br>
+					<a href="https://www.dropbox.com/sh/03kpyl21zcv321m/AACWUZBW_rw6FAMewNNeBQk1a?dl=1"><i class="fa fa-cloud-download fa-fw"></i> Here!</a><br>
+					<i class="fa fa-info fa-fw"></i> File size: 4MB</p>
+				</div> -->
+				<!-- misc -->
+				<div class="grid-70 misc">
+					<a href="#top">Back to top</a>
+				</div>
+			</div>
+			
+			<!-- footer -->
+			<div class="grid-100 footer">
+				<p>Copyright &copy; Heikki Heiskanen 2015</p>
+				<p>Contact me:</p>
+				<a href="https://twitter.com/Baserfaz" target="_blank"><i class="fa fa-twitter"></i> My Twitter</a><br>
+				<a href="http://t.co/0btbKLhgQF" target="_blank"><i class="fa fa-home"></i> Homepage (in finnish)</a>
+				
+			</div>
+		
+		</div>
+	</body>
+	
+ </html>
