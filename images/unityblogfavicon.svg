@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.5 r10040"
-   sodipodi:docname="New document 1">
+   sodipodi:docname="unityblogfavicon.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="13.380107"
-     inkscape:cx="20.435319"
-     inkscape:cy="936.28693"
+     inkscape:zoom="18.922329"
+     inkscape:cx="25.205407"
+     inkscape:cy="927.0235"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -57,37 +57,37 @@
      inkscape:groupmode="layer"
      id="layer1">
     <g
-       id="g3796"
-       inkscape:export-filename="C:\Users\Baserfaz\Documents\Internetsivut\Nettisivut\unityBlogThing\images\favicon.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90">
+       id="g3759"
+       inkscape:export-filename="C:\Users\Baserfaz\Documents\GitHub\unityBlog\images\favicon.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500">
       <path
-         transform="translate(-24,0)"
+         transform="translate(-27.213726,1.5694942)"
          d="m 56,123.21932 a 8,8 0 1 1 -16,0 8,8 0 1 1 16,0 z"
          sodipodi:ry="8"
          sodipodi:rx="8"
          sodipodi:cy="123.21932"
          sodipodi:cx="48"
          id="path3777"
-         style="fill:#a7c6d1;fill-opacity:0.26274511;fill-rule:nonzero;stroke:none"
+         style="fill:#1a7ea1;fill-opacity:0.26274511;fill-rule:nonzero;stroke:none"
          sodipodi:type="arc" />
       <text
          sodipodi:linespacing="125%"
          id="text3779"
-         y="128.49062"
-         x="19.048985"
+         y="130.0601"
+         x="15.835258"
          style="font-size:14px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
          xml:space="preserve"><tspan
-           y="128.49062"
-           x="19.048985"
+           y="130.0601"
+           x="15.835258"
            id="tspan3781"
            sodipodi:role="line">U</tspan></text>
       <path
          sodipodi:nodetypes="sssss"
          inkscape:connector-curvature="0"
          id="path3793"
-         d="m 28.858765,122.18677 c -1.229962,1.69041 -2.287227,-0.15495 -3.977616,-1.38492 -1.690391,-1.22995 -3.373789,-1.37876 -2.14383,-3.06915 1.229958,-1.69038 3.597369,-2.06364 5.28776,-0.83368 1.690392,1.22995 2.063646,3.59736 0.833686,5.28775 z"
-         style="fill:#ffffff;fill-opacity:0.22751322;fill-rule:nonzero;stroke:none" />
+         d="m 26.464266,126.22626 c -1.786795,2.4557 -3.322708,-0.22509 -5.778376,-2.0119 -2.45567,-1.78678 -4.901182,-2.00296 -3.114392,-4.45863 1.786789,-2.45565 5.225982,-2.99789 7.681653,-1.2111 2.455671,1.78677 2.997906,5.22597 1.211115,7.68163 z"
+         style="fill:#ffffff;fill-opacity:0.25925927;fill-rule:nonzero;stroke:none" />
     </g>
   </g>
 </svg>
