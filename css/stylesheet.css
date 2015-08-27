@@ -53,6 +53,10 @@ a, p, h1, h2, h3, h4, h5, h6, li {
 	font-weight: 300;
 }
 
+a {
+	color: rgb(28, 148, 198) !important;
+}
+
 pre {
 	font-family: 'Inconsolata', ;
 }
@@ -102,7 +106,7 @@ pre {
 
 .banner h1 a {
 	font-size: 5em;
-	color: #333;
+	color: #333 !important;
 }
 
 .banner h1 a:hover {
@@ -112,21 +116,15 @@ pre {
 .main_content {
 	border-top: 15px solid #333;
 	border-bottom: 15px solid #333;
-	/* background-color: #F0EDEE; */
 	background-color: rgba(240, 237, 238, .75); 
 	padding: 1.5em !important;
 }
 
 .post_display {
-	/* background-color: #f9f9f9; */
 	background-color: #F5F1ED;
 	margin-bottom: 1em;
 	padding: 1em !important;
 
-	/* border-radius: 2px;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px; */
-	
 	box-shadow: 0px 1px 1px #ccc;
 	-webkit-box-shadow: 0px 1px 1px #ccc;
 	-moz-box-shadow: 0px 1px 1px #ccc;
@@ -162,7 +160,7 @@ pre {
 .post_header a{
 	text-align: left;
 	font-size: 1em;
-	color: #333;
+	color: #333 !important;
 	display: inline;
 }
 
@@ -186,7 +184,7 @@ pre {
 }
 
 .post_date a {
-	color: #333;
+	color: #333 !important;
 }
 
 .post_date a:hover {
@@ -286,11 +284,10 @@ pre {
 	line-height: 1.5;
 	font-size: 1em;
 	text-decoration: none;
-	color: #F0EDEE;
+	color: #F0EDEE !important;
 }
 
 .misc_index a:hover {
-	/* box-shadow: 3px 3px 0 #ccc; */
 	opacity: 0.95;
 }
 
@@ -303,11 +300,10 @@ pre {
 	line-height: 1.5;
 	font-size: 1em;
 	text-decoration: none;
-	color: #F0EDEE;
+	color: #F0EDEE !important;
 }
 
 .misc a:hover {
-    /* box-shadow: 3px 3px 0 #ccc; */
 	opacity: 0.95;
 }
 

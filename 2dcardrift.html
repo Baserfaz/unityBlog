@@ -33,8 +33,8 @@
 				<div class="grid-100 post_date">
 					<ul>
 						<li><i class="fa fa-user fa-fw"></i> <a href="https://twitter.com/Baserfaz" target="_blank">Heikki Heiskanen</a></li>
-						<li><i class="fa fa-calendar fa-fw"></i> 26.8.2015</li>
-						<li><i class="fa fa-tags fa-fw"></i> car physics / game mechanics</li>
+						<li><i class="fa fa-calendar fa-fw"></i> 27.8.2015</li>
+						<li><i class="fa fa-tags fa-fw"></i> car physics / game mechanics / controller support</li>
 					</ul>
 				</div>
 				<!-- post image -->
@@ -45,8 +45,111 @@
 				<!-- post text -->
 				<div class="grid-70 post_text">
 					<h3>1. Create new game object</h3>
-					<p>This will be our car object. Add awesome graphics or just use my sprites (which are awesome too, just fyi).<br><i class="fa fa-exclamation-circle fa-fw"></i> See sidebar...</p>
-					<h3>2. Ready</h3>
+					<p>This will be our car object. Add awesome graphics or just use my sprites (which are awesome too, just fyi).</p>
+					<img src="images/topdowncar/08.PNG">
+					<img src="images/topdowncar/09.PNG">
+					<p> Make sure you add the sprite as child of the car game object, so you can
+					rotate the sprite 270 degrees on it's Z-axis when the parent (ie. car object) is selected, because we want the car to be facing towards the X-axis (red).<br><i class="fa fa-exclamation-circle fa-fw"></i> See sidebar for the sprites.</p>
+					<h3>2. Add rigidbody2D and box collider to your game object.</h3>
+					<img src="images/topdowncar/02.PNG">
+					<p>You can use my settings for the ridigbody2d as shown in the picture or test different values yourself. By changing linear drag your car will 
+					accelerate/deaccelerate slower on higher values and by changing angular drag you can manipulate how fast the car turns (rotation on z-axis).<br>
+					<i class="fa fa-exclamation-circle fa-fw"></i> Remember to change gravity scale to zero.</p>
+					<h3>3. Add code to our car game object</h3>
+					<p><i class="fa fa-exclamation-circle fa-fw"></i> You can find full code in the sidebar! (pastebin)</p>
+					<img src="images/topdowncar/03.PNG">
+					<pre>
+using UnityEngine;
+using System.Collections;
+
+public class car : MonoBehaviour {
+
+	private float speed = 0f;
+	private float maxSpeed = 15f;
+	private float startAngularDrag;
+	private float startOrthoSize;
+
+
+	void Start () {
+		startOrthoSize = Camera.main.orthographicSize;
+		startAngularDrag = GetComponent<Rigidbody2D> ().angularDrag;
+	}</pre>
+					<p>First we want to declare few variables and write a start function. You don't need to import or use unorthodox namespaces in this code, just go with the defaults.<br>
+					<i class="fa fa-exclamation-circle fa-fw"></i> You can change the maxSpeed variable higher or lower.</p>
+					<img src="images/topdowncar/04.PNG">
+					<pre>
+void FixedUpdate () {
+		CameraFunctions ();
+		InputHandlingKB ();
+		MovementHandlersRigid ();
+}</pre>
+					<p>Because we are using Unity 5 physics system, we want to use FixedUpdate function. These three functions, inside the FixedUpdate, are simply everything we need. We'll delve into them now!</p><br>
+					<img src="images/topdowncar/07.PNG">
+					<pre>
+//camera follow, smooth
+private void CameraFunctions() {
+	if (speed > startOrthoSize) {
+		Camera.main.orthographicSize = Mathf.Lerp (Camera.main.orthographicSize, 5f, Time.deltaTime * 0.5f);
+	} else {
+		Camera.main.orthographicSize = Mathf.Lerp (Camera.main.orthographicSize, startOrthoSize, Time.deltaTime * 0.5f);
+	}
+	Camera.main.transform.position -= (Camera.main.transform.position - new Vector3(transform.position.x, transform.position.y, -10f)) * Time.deltaTime * 10f;
+}</pre>
+					<p>CameraFunctions() is responsible for moving our main camera smoothly and zooming in and out as the car's speed increases.</p>
+					
+					<img src="images/topdowncar/06.PNG">
+					<pre>
+//keyboard &amp;&amp; gamepad
+private void InputHandlingKB() {
+	if (Input.GetKey (KeyCode.UpArrow) || Input.GetAxisRaw ("Fire2") > 0f) {
+		if (speed &lt; maxSpeed) {
+			speed += 0.1f;
+		}
+	} else if (Input.GetKey (KeyCode.DownArrow) || Input.GetAxisRaw ("Fire3") > 0f) {
+		if (speed &gt; 0f) {
+			speed -= 0.3f;
+		}
+	} else {
+		if (speed &gt; 0f) {
+			speed -= 0.2f;
+		}
+	}
+	if (speed &lt; 0f) {
+		speed = 0f;
+	}
+}</pre>
+					<p>InputHandlingKB(), as the name suggests, it handles the player's key presses. in our case it takes care of acceleration and braking. If the player doesn't press anything, the car will slowly lose speed.</p>
+					
+					<img src="images/topdowncar/05.PNG">
+					<pre>
+//using rigidbody2d
+private void MovementHandlersRigid() {
+	GetComponent&lt;Rigidbody2D&gt; ().AddForce (transform.right * speed);
+	if (GetComponent&lt;Rigidbody2D&gt; ().velocity.magnitude &gt; 0.5f) {
+		GetComponent&lt;Rigidbody2D&gt; ().angularDrag = startAngularDrag;
+		GetComponent&lt;Rigidbody2D&gt; ().AddTorque (-Input.GetAxisRaw ("Horizontal"));
+	} else {
+		GetComponent&lt;Rigidbody2D&gt; ().angularDrag = 10f;
+	}
+}</pre>
+					<p>MovementHandlersRigid() is the most important part of this code. It actually makes our car to move and turn.</p><br>
+					<p>AddForce simply adds force in the direction of our car game object's transform right, which is the red axis. (This is why we rotated the sprite!)</p><br>
+					<p>First we check if the velocity vector's magnitude is greater than 0.5f, which means that if the car is moving really slowly you can't actually turn. This prevents the car to spin around while not moving forward.</p><br>
+					<p> I use here Input.GetAxisRaw("Horizontal") to get a value from -1.0 to 1.0, meaning that you can use analogical input devices such as gamepad's analog sticks to turn smoothly. 
+					This also works with keyboard input but it returns 1, -1 or 0. </p><br>
+					<p>AngularDrag is just a small touch, that will make the car seem heavier and slide a little bit on extremely slow speeds.</p>
+					
+					<h3>4. Add tire tracks</h3>
+					<img src="images/topdowncar/10.PNG">
+					<p>Add two empty game objects to your car game object as children and then add trail renderers to each of them. Simple, but effective!</p>
+					
+					<h3>5. Create some obstacles</h3>
+					<img src="images/topdowncar/11.PNG">
+					<p>Create new game object, select the cone sprite and add box collider and rigidbody2D to it. Then save if as a cone prefab.<br>
+					<i class="fa fa-exclamation-circle fa-fw"></i> Change it's mass to 0.1 that the car can push it around and don't forget the gravity scale.</p>
+					
+					<h3>6. Ready</h3>
+					<p>Save your code and add it to the car game object and you are all set.</p>
 					<img src="images/topdowncar/awesome.gif">
 				</div>
 				
@@ -59,6 +162,10 @@
 					<p>Download cone sprite:<br>
 					<a href="images/topdowncar/c2.png" target="_blank"><i class="fa fa-cloud-download fa-fw"></i> Here!</a></p>
 				</div>
+				<div class="grid-30 sidebar">
+					<p>Code in pastebin:<br>
+					<a href="http://pastebin.com/PF6T9Tqq" target="_blank"><i class="fa fa-code fa-fw"></i> Here!</a></p>
+				</div>
 				
 				<!-- misc -->
 				<div class="grid-70 misc">
@@ -70,10 +177,11 @@
 			<div class="grid-100 footer">
 				<p>Copyright &copy; Heikki Heiskanen 2015</p>
 				<ul>
-					<li><a href="https://twitter.com/Baserfaz" target="_blank"><i class="fa fa-twitter"></i> My Twitter</a></li>
-					<li><a href="http://t.co/0btbKLhgQF" target="_blank"><i class="fa fa-home"></i> Homepage</a></li>
+					<li><a href="https://twitter.com/Baserfaz" target="_blank"><i class="fa fa-twitter fa-fw"></i> My Twitter</a></li>
+					<li><a href="http://t.co/0btbKLhgQF" target="_blank"><i class="fa fa-home fa-fw"></i> Homepage</a></li>
+					<li><a href="http://baserfaz.github.io/Projects/" target="_blank"><i class="fa fa-database fa-fw"></i> My projects</a></li>
 				</ul>
-				<p><a href="https://unsplash.com/" target="_blank">Background images from unsplash.com</a></p>
+				<p>Background images from <a href="https://unsplash.com/" target="_blank">unsplash.com</a></p>
 			</div>
 		
 		</div>
