@@ -1,4 +1,2 @@
-# unityBlog
-blog page
-Can be found here: 
+# Unity3D blog
 http://baserfaz.github.io/unityBlog/
